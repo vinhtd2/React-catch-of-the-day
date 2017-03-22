@@ -1,0 +1,38 @@
+/*
+  Possible Animations:
+  enter
+  leave
+  appear Must set transitionAppear={true} on animation component
+*/
+/* Order Animation */
+.order-enter
+  transition all .5s
+  transform translateX(-120%)
+
+  padding 0 !important
+  &.order-enter-active
+    transform translateX(0)
+    padding 2rem 0 !important
+
+.order-leave
+  transition all .5s
+  transform translateX(0)
+  &.order-leave-active
+    padding 0
+    transform translateX(120%)
+
+/* Count Animation */
+.count-enter
+  transition all .25s
+  transform translateY(100%)
+  &.count-enter-active
+    transform translateY(0)
+
+.count-leave
+  transition all .25s
+  position absolute
+  left 0
+  bottom 0
+  transform translateY(0)
+  &.count-leave-active
+    transform translateY(-100%)
